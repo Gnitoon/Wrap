@@ -4,6 +4,7 @@
     --hover-shadow2: 0px 0px 4px -1px #FFE4E6;
     --hover-shadow: 0px 2px 5px rgba(100, 80, 80, 0.5);
     --bg-top: #F1F1F1;
+    --bg-light: #FFFFFF;
     --bg-top-darker: #E5E5E5;
     --text-dark: #191919;
     --text-light: #333333;
@@ -166,4 +167,104 @@ header{
     margin-left: 8vw;
     width: fit-content;
     max-width: -webkit-fill-available;
+}
+
+
+
+
+#floatbox-container{
+    position: absolute;
+    display: flex;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+}
+
+.float-card{
+    margin: auto;
+    z-index: 1;
+    box-shadow: var(--hover-shadow);
+    padding: 20px 25px;
+}
+
+
+/* Filters box */
+@media all {
+    #sort-box{
+        width: 40vw;
+        height: fit-content;
+        min-width: 250px;
+    }
+    
+    #sort-box .plusIcon-cont{
+        width: fit-content;
+        cursor: pointer;
+    }
+    #sort-box .plus{
+        max-width:  25px;
+        max-height: 25px;
+    }
+    
+    
+    #sort-box .filter-header{
+        display: block;
+        width: 100%;
+    }
+    #sort-box .filter-header b{
+        margin: auto 0;
+        position: absolute;
+        font-size: 110%;
+    }
+    #sort-box .filter-header .plusIcon-cont{
+        display: block;
+        float: right;
+    }
+    
+    #filter-items-cont{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #filter-items-cont label{
+        margin: 5px 0px;
+        margin-left: 5px;
+    }
+    
+    #filter-items-cont .inpt{
+        background-color: var(--bg-light);
+        margin-bottom: 10px;
+    }
+    
+    #sort-box .btn-cta{
+        margin-top: 10px;
+        float: right;
+    }
+
+}
+
+
+#details-cont{
+    width: 90%;
+    margin-top: 70px;
+    height: 70%;
+
+}
+  
+#details-cont .plus{
+    max-width:  25px;
+    max-height: 25px;
+}
+#details-cont .filter-header{
+    display: block;
+    width: 100%;
+}
+#details-cont .filter-header b{
+    margin: auto 0;
+    position: absolute;
+    font-size: 110%;
+}
+#details-cont .filter-header .plusIcon-cont{
+    display: block;
+    cursor: pointer;
+    float: right;
 }

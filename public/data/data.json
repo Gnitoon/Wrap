@@ -21,6 +21,13 @@
             "tags": [
                 "example",
                 "test"
+            ],
+            "links":[
+                "https://google.com"
+            ],
+            "images":[
+                "https://google.com"
+                
             ]
         },
         {
@@ -44,6 +51,20 @@
             "tags": [
                 "example",
                 "test"
+            ],
+            "links":[
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                }
+                
+            ],
+            "images":[
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                }
+                
             ]
         }
     ]

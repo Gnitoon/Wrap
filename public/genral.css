@@ -37,6 +37,12 @@ body{
     box-shadow: var(--hover-shadow);
 }
 
+.btn-cta{
+    background-color: var(--link);
+    color: var(--bg-top);
+    outline: initial;
+}
+
 .inpt{
     border: none;
     border-radius: 5px;
@@ -87,4 +93,9 @@ body{
 .not-link{
     text-decoration: none;
     color: var(--text-dark);
+}
+
+.card-top{
+    background-color: var(--bg-top);
+    border-radius: 10px;
 }

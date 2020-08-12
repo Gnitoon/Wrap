@@ -1,5 +1,5 @@
 <template>
-	<div id="app" class="light">
+	<div id="app" class="light" >
 
 		<!-- details and filter container -->
 		<div id="floatbox-container" v-show="floatbox.filter || floatbox.details" >
@@ -19,58 +19,7 @@
 			</div>
 
 
-			<div id="details-cont" class="card-top float-card" v-if="floatbox.details">
-
-				<div class="filter-header">
-					<a>Event details</a>
-					<button class="btn dw-event" >
-						<a :href="genDownloadableData(event)" :download="'wrap20-export_'+event.title" class="not-link">
-							<img src="./assets/icons/download.svg" alt="download icon" class="down-icon ac-search-icons">
-							Download JSON
-						</a>
-					</button>
-					<plus close="true" @click="floatbox.details = !floatbox.details"></plus>
-				</div>
-
-				<div class="details-sub-cont">
-
-					<h1>{{event.title}}</h1>
-
-					<div class="dit-cont">
-						<p class="dit-title">Date</p>
-						<p>{{getFullDate(event.date.timestamp)}}</p>
-						<p class="dit-desc">(from: {{event.date.from}} To: {{event.date.to}})</p>
-					</div>
-
-					<div class="dit-cont">
-						<p class="dit-title">Description</p>
-						<p>{{event.description.long}}</p>
-					</div>
-
-					<div class="dit-cont">
-						<p class="dit-title">Tags</p>
-						<p>{{event.tags.toString()}}</p>
-					</div>
-					
-					<div class="dit-cont">
-						<p class="dit-title">Links</p>
-						<ul>
-							<li v-for="lk in event.links"><a class="link link-blue" :href="lk.url" target="blank">{{lk.title}}</a></li>
-						</ul>
-					</div>
-
-					<div class="dit-cont">
-						<p class="dit-title">Images</p>
-						<ul>
-							<li v-for="im in event.images"><a class="link link-blue" :href="im.url" target="blank">{{im.title}}</a></li>
-						</ul>
-					</div>
-
-
-				</div>
-
-			</div>
-
+			<detailbox v-if="floatbox.details" :floatbox="floatbox" :event="event"></detailbox>
 
 		</div>
 
@@ -158,15 +107,16 @@
 	import simplebar from 'simplebar-vue'
 
 	import spinner from "./components/spinner.vue"
-
+	import detailbox from "./components/details.vue"
 	// "schrodinger's" icon: plus or X until you set a prop, ~ocoursenot 
 	import plus from "./components/plus.vue"
 
 	export default {
 		components:{
-			spinner,
 			plus,
-			simplebar
+			spinner,
+			detailbox,
+			simplebar,
 		},
 		data(){
 			return {
@@ -205,6 +155,16 @@
 
 		},
 		watch:{
+			'floatbox.details'(val){
+				// to remove body scrollbar while details card is open 
+				if(val){
+					document.body.style.overflow = 'hidden'
+				}
+				else{
+					document.body.style.overflow = ''
+
+				}
+			},
 			search(val){
 				if(val){
 					if(this.filters.items.length > 0) this.events = this.data.events;
@@ -242,10 +202,9 @@
 			},
 			getFullDate: function(timestamp){
 				return new Date(timestamp).toUTCString()
-				
 			},
 			openDetails: function(id){
-				this.event = this.events.filter(el => el.id == id)[0]
+				this.event = this.events.find(el => el.id == id)
 				console.log(this.event);
 				this.floatbox.details = true;
 			},
@@ -288,8 +247,7 @@
 					this.dataToSave.context = "/data/data.json";
 				}
 				else{
-					data = `data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(data))}`;
-					this.dataToSave.context = data;
+					this.dataToSave.context = this.genDownloadableData(data);
 				}
 				//console.log(data);
 			}

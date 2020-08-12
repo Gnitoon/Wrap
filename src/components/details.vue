@@ -4,7 +4,7 @@
 				<div class="filter-header">
 					<a>Event details</a>
 					<button class="btn dw-event" >
-						<a :href="genDownloadableData(event)" :download="'wrap20-export_'+event.title" class="not-link">
+						<a :href="genDownloadableData(event)" :download="'wrap20-export_'+event.title+'.json'" class="not-link">
 							<img src="../assets/icons/download.svg" alt="download icon" class="down-icon ac-search-icons">
 							Download JSON
 						</a>

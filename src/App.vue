@@ -205,7 +205,7 @@
 			},
 			openDetails: function(id){
 				this.event = this.events.find(el => el.id == id)
-				console.log(this.event);
+				//console.log(this.event);
 				this.floatbox.details = true;
 			},
 			genDownloadableData:function(data){

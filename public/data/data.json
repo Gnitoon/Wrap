@@ -23,10 +23,17 @@
                 "test"
             ],
             "links":[
-                "https://google.com"
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                }
+                
             ],
             "images":[
-                "https://google.com"
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                }
                 
             ]
         },

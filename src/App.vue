@@ -9,7 +9,7 @@
 					<plus close="true" @click="floatbox.filter = !floatbox.filter"></plus>
 				</div>
 				<div id="filter-items-cont">
-					<label for="fi-month">month separated by ' , '</label>
+					<label for="fi-month">months separated by ' , '</label>
 					<input type="text" placeholder="jan, feb, mar..." v-model="filters.moth" class="inpt">
 					
 					<label for="fi-month">tags separated by ' , '</label>
@@ -19,37 +19,52 @@
 			</div>
 
 
-			<div
-				id="details-cont"
-				class="card-top float-card"
-				v-if="floatbox.details"
-			>
+			<div id="details-cont" class="card-top float-card" v-if="floatbox.details">
+
 				<div class="filter-header">
 					<a>Event details</a>
+					<button class="btn dw-event" >
+						<a :href="genDownloadableData(event)" :download="'wrap20-export_'+event.title" class="not-link">
+							<img src="./assets/icons/download.svg" alt="download icon" class="down-icon ac-search-icons">
+							Download JSON
+						</a>
+					</button>
 					<plus close="true" @click="floatbox.details = !floatbox.details"></plus>
 				</div>
 
 				<div class="details-sub-cont">
+
 					<h1>{{event.title}}</h1>
 
-					<a>Date</a>
-					<br>
-					<a>{{getFullDate(event.date.timestamp)}}</a>
-					<br>
-					<a>(from: {{event.date.from}}) to: {{event.date.to}}</a>
-					<br>
-					<br>
-					<a>Description</a>
-					<br>
-					<a>{{event.description.long}}</a>
-					<br>
-					<br>
-					<a>Links</a>
-					<br>
-					<ul>
-						<li v-for="lk in event.links"><a :href="lk.url">{{lk.title}}</a></li>
-					</ul>
+					<div class="dit-cont">
+						<p class="dit-title">Date</p>
+						<p>{{getFullDate(event.date.timestamp)}}</p>
+						<p class="dit-desc">(from: {{event.date.from}} To: {{event.date.to}})</p>
+					</div>
 
+					<div class="dit-cont">
+						<p class="dit-title">Description</p>
+						<p>{{event.description.long}}</p>
+					</div>
+
+					<div class="dit-cont">
+						<p class="dit-title">Tags</p>
+						<p>{{event.tags.toString()}}</p>
+					</div>
+					
+					<div class="dit-cont">
+						<p class="dit-title">Links</p>
+						<ul>
+							<li v-for="lk in event.links"><a class="link link-blue" :href="lk.url" target="blank">{{lk.title}}</a></li>
+						</ul>
+					</div>
+
+					<div class="dit-cont">
+						<p class="dit-title">Images</p>
+						<ul>
+							<li v-for="im in event.images"><a class="link link-blue" :href="im.url" target="blank">{{im.title}}</a></li>
+						</ul>
+					</div>
 
 
 				</div>
@@ -66,7 +81,7 @@
 				<div id="contrib">
 					<a href="https://github.com/matsukii/wrap20" class="link" target="blank">
 						<img src="./assets/icons/github.svg" class="git-icon" alt="Github icon">
-						Contribute on Github
+						Contribute
 					</a>
 				</div>
 			</div>
@@ -86,17 +101,16 @@
 			<input type="text" id="ac-search" class="inpt" v-model="search" placeholder="Search">
 
 			<button
-				class="btn"
-				id="ac-sort"
+				class="btn ac-sort"
 				@click="floatbox.filter = !floatbox.filter"
 			>
 				<img src="./assets/icons/sort.svg" alt="sort icon" id="sort-icon" class="ac-search-icons">
 				Filter...
 			</button>
 			
-			<button class="btn" id="ac-sort">
+			<button class="btn ac-sort" >
 				<a :href="dataToSave.context" :download="dataToSave.name" class="not-link">
-					<img src="./assets/icons/download.svg" alt="download icon" id="down-icon" class="ac-search-icons">
+					<img src="./assets/icons/download.svg" alt="download icon" class="down-icon ac-search-icons">
 					Download JSON
 				</a>
 			</button>
@@ -113,8 +127,13 @@
 						<p class="evti-text evtlh-desc">Short desccription</p>
 					</div>
 				</li>
-				<li v-for="(item, i) in events" class="evt-list-item" v-bind:key="item.id" v-show="loaded">
-					<div @click="openDetails(item.id)">
+				<li
+					v-for="(item, i) in events"
+					@click="openDetails(item.id)"
+					class="evt-list-item"
+					v-bind:key="item.id" v-show="loaded"
+				>
+					<div >
 						<p class="evti-text evtit-date" >{{getDate(item.date.timestamp)}}</p>
 						<p class="evti-text evtit-title">{{item.title}}</p>
 						<p class="evti-text evtit-desc" >{{item.description.short}}</p>
@@ -136,6 +155,7 @@
 </template>
 
 <script>
+	import simplebar from 'simplebar-vue'
 
 	import spinner from "./components/spinner.vue"
 
@@ -145,7 +165,8 @@
 	export default {
 		components:{
 			spinner,
-			plus
+			plus,
+			simplebar
 		},
 		data(){
 			return {
@@ -186,7 +207,7 @@
 		watch:{
 			search(val){
 				if(val){
-					if(this.items.length > 0) this.events = this.data.events;
+					if(this.filters.items.length > 0) this.events = this.data.events;
 
 					val = val.toLowerCase();
 
@@ -227,6 +248,9 @@
 				this.event = this.events.filter(el => el.id == id)[0]
 				console.log(this.event);
 				this.floatbox.details = true;
+			},
+			genDownloadableData:function(data){
+				return `data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(data))}`
 			},
 			
 

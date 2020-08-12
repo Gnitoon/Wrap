@@ -17,7 +17,7 @@
 }
 
 body{
-    background: linear-gradient(0deg, rgba(255, 159, 159, 0.07), rgba(255, 159, 159, 0.07)), #FFFFFF;
+    background: linear-gradient(0deg, rgba(255, 159, 159, 0.03), rgba(255, 159, 159, 0.04)), #FFFFFF;
     /* background-color: #646464; */
     color: var(--text-dark)
 }
@@ -83,7 +83,11 @@ body{
     text-decoration: none;
     color: var(--text-dark);
 }
-.link:hover{
+.link-blue{
+    color: var(--link);
+}
+
+.link:hover, .link-blue:hover{
     transform: scale(1.05);
     color: var(--link);
     text-shadow: var(--text-hover-shadow);

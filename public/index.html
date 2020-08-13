@@ -2,12 +2,24 @@
 <html lang="en">
 
 <head prefix="og: https://wrap20.web.app">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-G7BZNKDQQ2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-G7BZNKDQQ2');
+	</script>
+
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="icon" href="<%= BASE_URL %>w20-light.png">
 	<link rel="shortcut icon" href="/w20-light.png" type="image/png">
 	<meta name="msapplication-TileColor" content="#F1F1F1">
+	<meta name="google-site-verification" content="0Qu2RN21m1BBdeJ0cNeyKlvbnZ1-H6XjkNu3q7McsKQ" />
 	<title><%= htmlWebpackPlugin.options.title %></title>
 
 	<meta name="description" content="wrap20 is a simple collaborative list of things that happened in the year">
@@ -24,14 +36,13 @@
 
 	
 	<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="genral.css">
-	<link rel="stylesheet" href="home.css">
-	<link rel="stylesheet" href="overwrites.css">
+	<link rel="stylesheet" href="genral.min.css">
+	<link rel="stylesheet" href="home.min.css">
+	<!-- <link rel="stylesheet" href="overwrites.css"> -->
 	
 	<!-- <script async src="./data/data.js"></script>
 		<script async src="./data/links-img.js"></script> -->
 		
-	<meta name="theme-color" content="#F1F1F1">
 </head>
 
 <body id="bode">
@@ -45,6 +56,10 @@
 
 	</div>
 	<!-- built files will be auto injected -->
+	<script>
+		//force theme color if the vue config not set it correctly
+		document.querySelector('head meta[name="theme-color"]').setAttribute('content', '#F1F1F1')
+	</script>
 </body>
 
 </html>

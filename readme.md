@@ -1,6 +1,20 @@
+# Colaborate
 
-# Event data example
+## The code way
+1. fork or clone the repository
+2. add the event to data.json on event array
+3. create a pull request on event branch
+4. wait until review and/or merge
 
+## The non code friendly way
+1. Create a issue with "[event-request]" on the title and include something about the event you want to be added (Should include: title, description, date, links and image links)
+2. Wait for review
+
+_A page to create events may be available soon_
+
+
+
+## Event data example
 
 ```json
 {

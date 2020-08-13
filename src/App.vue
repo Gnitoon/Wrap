@@ -145,7 +145,7 @@
 		created(){
 
 			// get events data [another super useful comment \o/]
-			fetch('/data/data.json').then(dat => dat.json()).then(res => {
+			fetch('https://raw.githubusercontent.com/Matsukii/wrap20/events/data.json?token=AGYDVBUG6GIUPOBTPWE2BOK7HXLXA').then(dat => dat.json()).then(res => {
 				this.data = res;
 				this.loaded = true
 				this.events = res.events

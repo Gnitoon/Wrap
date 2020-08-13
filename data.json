@@ -1,0 +1,282 @@
+{
+    "updated": "2020/08/07",
+    "lang": "en",
+    "events": [
+        {
+            "id": "example",
+            "title": "Example",
+            "month": "january",
+            "date": {
+                "timestamp": 1596995834983,
+                "from": "2020/08/07 ~10:00",
+                "to": "2020/08/08 ~10:00"
+            },
+            "description": {
+                "short": "A quick descripion to show on each row",
+                "long": "A longer description with some info about the event"
+            },
+            "local": [
+                "BR"
+            ],
+            "tags": [
+                "example",
+                "test"
+            ],
+            "links":[
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                },
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                },
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                },
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                },
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                },
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                },
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                },
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                },
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                },
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                },
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                }
+                
+            ],
+            "images":[
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                },
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                },
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                },
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                },
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                },
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                }
+                
+            ]
+        },
+        {
+            "id": "example2",
+            "title": "Another example",
+            "month": "feb",
+            "date": {
+                "timestamp": 1596995834983,
+                "from": "2020/08/07 ~10:00",
+                "to": "2020/08/08 ~10:00"
+            },
+            "description": {
+                "short": "A quick descripion to show on each row",
+                "long": "A longer description with some info about the event"
+            },
+            "local": [
+                "US, NY",
+                "All counries",
+                "unknown"
+            ],
+            "tags": [
+                "example",
+                "test"
+            ],
+            "links":[
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                }
+                
+            ],
+            "images":[
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                }
+                
+            ]
+        },
+        {
+            "id": "example3",
+            "title": "Example",
+            "month": "january",
+            "date": {
+                "timestamp": 1596995834983,
+                "from": "2020/08/07 ~10:00",
+                "to": "2020/08/08 ~10:00"
+            },
+            "description": {
+                "short": "A quick descripion to show on each row",
+                "long": "A longer description with some info about the event"
+            },
+            "local": [
+                "BR"
+            ],
+            "tags": [
+                "example",
+                "test"
+            ],
+            "links":[
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                }
+                
+            ],
+            "images":[
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                }
+                
+            ]
+        },
+        {
+            "id": "example4",
+            "title": "Another example",
+            "month": "feb",
+            "date": {
+                "timestamp": 1596995834983,
+                "from": "2020/08/07 ~10:00",
+                "to": "2020/08/08 ~10:00"
+            },
+            "description": {
+                "short": "A quick descripion to show on each row",
+                "long": "A longer description with some info about the event"
+            },
+            "local": [
+                "US, NY",
+                "All counries",
+                "unknown"
+            ],
+            "tags": [
+                "example",
+                "test"
+            ],
+            "links":[
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                }
+                
+            ],
+            "images":[
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                }
+                
+            ]
+        },
+        {
+            "id": "example5",
+            "title": "Example",
+            "month": "january",
+            "date": {
+                "timestamp": 1596995834983,
+                "from": "2020/08/07 ~10:00",
+                "to": "2020/08/08 ~10:00"
+            },
+            "description": {
+                "short": "A quick descripion to show on each row",
+                "long": "A longer description with some info about the event"
+            },
+            "local": [
+                "BR"
+            ],
+            "tags": [
+                "example",
+                "test"
+            ],
+            "links":[
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                }
+                
+            ],
+            "images":[
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                }
+                
+            ]
+        },
+        {
+            "id": "example6",
+            "title": "Another example",
+            "month": "feb",
+            "date": {
+                "timestamp": 1596995834983,
+                "from": "2020/08/07 ~10:00",
+                "to": "2020/08/08 ~10:00"
+            },
+            "description": {
+                "short": "A quick descripion to show on each row",
+                "long": "A longer description with some info about the event"
+            },
+            "local": [
+                "US, NY",
+                "All counries",
+                "unknown"
+            ],
+            "tags": [
+                "example",
+                "test"
+            ],
+            "links":[
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                }
+                
+            ],
+            "images":[
+                {
+                    "url":"https://google.com",
+                    "title":"Google"
+                }
+                
+            ]
+        }
+    ]
+}

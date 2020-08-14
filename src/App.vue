@@ -6,16 +6,21 @@
 			</a>
 			<plus close="true" @click="accept"></plus>
 		</div>
-		<home></home>
+		<!-- <home></home> -->
+		<router-view/>
 	</div>
 </template>
 <script>
 	import home from './views/Home.vue'
+	import gen from './views/generator.vue'
+
 	import plus from './components/plus.vue'
+	
 	export default {
 		components:{
 			home,
-			plus
+			plus,
+			gen
 		},
 		data(){
 			return {

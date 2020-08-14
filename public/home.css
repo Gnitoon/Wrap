@@ -23,28 +23,6 @@ body{
     position: relative;
 }
 
-header{
-    padding: 20px;
-}
-
-.git-icon{
-    max-width: 25px;
-    /* vertical-align: bottom; */
-    margin-bottom: -5px;
-}
-
-.lettermrk{
-    display: inline-block;
-}
-
-
-#contrib{
-    width: fit-content;
-    display: inline-block;
-    float: right;
-    margin-top: 3px;
-    color: var(--text-dark);
-}
 
 
 .site-desc{

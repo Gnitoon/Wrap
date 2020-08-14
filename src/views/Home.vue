@@ -23,7 +23,9 @@
 
 		</div>
 
-		<header>
+		<headerbar/>
+
+		<!-- <header>
 			<div id="header">
 				<img src="../assets/wrap20.svg" alt="site lettermark" class="lettermrk">
 				
@@ -34,7 +36,7 @@
 					</a>
 				</div>
 			</div>
-		</header>
+		</header> -->
 
 
 		<div class="site-desc">
@@ -100,6 +102,7 @@
 	import spinner from "@/components/spinner.vue"
 	import detailbox from "@/components/details.vue"
 	import listItem from "@/components/listItem.vue"
+	import headerbar from "@/components/header.vue"
 
 	// "schrodinger's" icon: plus or X until you set a prop, ~ocoursenot 
 	import plus from "@/components/plus.vue"
@@ -112,6 +115,7 @@
 			detailbox,
 			simplebar,
 			listItem,
+			headerbar,
 		},
 		data(){
 			return {

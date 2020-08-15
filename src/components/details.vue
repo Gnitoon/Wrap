@@ -19,6 +19,8 @@
         <div class="dit-cont">
             <p class="dit-title">Date</p>
             <p>{{getFullDate(event.date.timestamp)}}</p>
+            
+            <!-- change to work with timestamp -->
             <p class="dit-desc">(from: {{event.date.from}} To: {{event.date.to}})</p>
         </div>
 

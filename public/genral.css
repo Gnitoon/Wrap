@@ -48,7 +48,7 @@ body{
     border-radius: 5px;
     font-size: 100%;
     box-shadow: var(--shadow);
-    padding: 5px 10px;
+    padding: 7px 10px;
     background-color: var(--bg-top);
     outline: none;
 }
@@ -58,6 +58,11 @@ body{
 .inpt:focus{
     box-shadow: var(--focus-shadow);
 }
+
+.lighter{
+    background-color: #FFFFFF;
+}
+
 
 .slct{
     border: none;
@@ -98,4 +103,21 @@ body{
 .card-top{
     background-color: var(--bg-top);
     border-radius: 10px;
+}
+
+.arrow-container{
+    max-width: 30px;
+}
+
+.arrow{
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.chip{
+    background: var(--bg-top-darker);
+    padding: 3px 14px;
+    border-radius: 9px;
+    font-size: 103%;
+    margin: 2px;
 }

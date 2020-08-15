@@ -66,6 +66,10 @@
 				</a>
 			</button>
 
+			<button class="btn" style="margin-left: 10px;">
+				<router-link to="/gen" class="link">add a event</router-link>
+			</button>
+
 		</div>
 
 		<div id="main-list-container">

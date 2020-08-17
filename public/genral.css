@@ -18,8 +18,8 @@
 
 body{
     background: linear-gradient(0deg, rgba(255, 159, 159, 0.03), rgba(255, 159, 159, 0.04)), #FFFFFF;
-    /* background-color: #646464; */
-    color: var(--text-dark)
+    /* background-color: #191919; */
+    color: var(--text-dark);
 }
 
 .btn{
@@ -41,6 +41,30 @@ body{
     background-color: var(--link);
     color: var(--bg-top);
     outline: initial;
+}
+
+.add-btn{
+    display: flex;
+    max-width: 500px;
+    
+}
+.add-btn .btn{
+    margin: auto;
+
+}
+.add-btn .plusIcon-cont{
+    display: inline-block;
+    /* height: fit-content; */
+    max-height: 17px;
+    margin-left: 5px;
+    background-color: var(--bg-light);
+    padding: 5px;
+    border-radius: 5px;
+    vertical-align: sub;
+}
+.add-btn .plus{
+    max-width: 17px;
+    max-height: 17px;
 }
 
 .inpt{

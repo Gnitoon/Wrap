@@ -1,16 +1,28 @@
 # Colaborate
 
-## The code way
+[Event request generator page](https://wrap20.web.app/request)
+[Event request on Google forms](https://forms.gle/JDjMavk3hNTQ23aJ7)
+
+
+## Using pull request
 1. fork or clone the repository
 2. add the event to data.json on event array
 3. create a pull request on event branch
 4. wait until review and/or merge
 
-## The non code friendly way
+## Using issue
 1. Create a issue with "[event-request]" on the title and include something about the event you want to be added (Should include: title, description, date, links and image links)
 2. Wait for review
 
-_A page to create events may be available soon_
+## Using JSON generator page
+1. Go to [Event request generator page](https://wrap20.web.app/request) fill the form and copy the genarated JSON
+2. use one of the above options to send the generated data
+    _later may be available a way to directly submit_
+3. wait untuil review and merge
+
+## Using Google Forms
+1. Go to [Event request on Google forms](https://forms.gle/JDjMavk3hNTQ23aJ7), fill up the form and submit
+2. wait until merge to list
 
 
 

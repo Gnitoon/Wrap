@@ -360,7 +360,9 @@
 				}
 			}
 		},
-		
+		created() {
+			this.togen.date.timestamp = Date.now()
+		},
 		computed:{
 			generated(){
 				this.togen.id = `${this.togen.title}_${this.genId()}`

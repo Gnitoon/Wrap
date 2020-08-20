@@ -1,7 +1,7 @@
 <template>
 <li class="evt-list-item" @click="$emit('click')">
     <div>
-        <p class="evti-text evtit-date" >{{getDate(item.date.timestamp)}}</p>
+        <p class="evti-text evtit-date" >{{getDate(item.date.from)}}</p>
         <p class="evti-text evtit-title">{{item.title}}</p>
         <p class="evti-text evtit-desc" >{{item.description.short}}</p>
     </div>

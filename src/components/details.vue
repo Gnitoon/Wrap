@@ -16,13 +16,19 @@
 
         <h1>{{event.title}}</h1>
 
+        
+        <div class="dit-cont">
+            <p class="dit-request">Requested by {{event.creator}}</p>
+        </div>
+
         <div class="dit-cont">
             <p class="dit-title">Date</p>
-            <p>{{getFullDate(event.date.timestamp)}}</p>
+            <p>{{getFullDate(event.date.from)}}</p>
             
             <!-- change to work with timestamp -->
-            <p class="dit-desc">(from: {{event.date.from}} To: {{event.date.to}})</p>
+            <p class="dit-desc">(from: {{getFullDate(event.date.from)}} To: {{getFullDate(event.date.to)}})</p>
         </div>
+
 
         <div class="dit-cont">
             <p class="dit-title">Description</p>
@@ -123,7 +129,8 @@ export default {
             return `data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(data))}`
         },
         getFullDate: function(timestamp){
-            return new Date(timestamp).toUTCString()
+            let d = new Date(timestamp).toUTCString()
+            return d == 'Invalid Date' ? 'unknown' : d
         },
         closeDetails:function(){
             console.log("closing");

@@ -67,7 +67,7 @@
 			</button>
 
 			<button class="btn" style="margin-left: 10px;">
-				<router-link to="/gen" class="link">add a event</router-link>
+				<router-link to="/request" class="link">Event request</router-link>
 			</button>
 
 		</div>

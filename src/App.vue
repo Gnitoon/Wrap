@@ -12,7 +12,7 @@
 </template>
 <script>
 	import home from './views/Home.vue'
-	import gen from './views/generator.vue'
+	import reqst from './views/request.vue'
 
 	import plus from './components/plus.vue'
 	
@@ -20,7 +20,7 @@
 		components:{
 			home,
 			plus,
-			gen
+			reqst
 		},
 		data(){
 			return {

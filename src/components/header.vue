@@ -22,7 +22,10 @@
 
 <script>
 import tailedArrow from './tailed-arrow'
-import Vtooltip from 'v-tooltip'
+import Vue from 'vue'
+import VTooltip from 'v-tooltip'
+
+
 Vue.use(VTooltip)
 export default {
     name:"headerbar",

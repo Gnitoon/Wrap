@@ -14,6 +14,11 @@
     --text-light: #333333;
     --link: #00B2FF;
     --link-hover: #006F9E;
+
+    --bg-light: #FFFFFF;
+    --bg-top-darker: #E5E5E5;
+    --text-dark: #191919;
+    --text-light: #333333;
 }
 
 body{
@@ -56,15 +61,19 @@ body{
     display: inline-block;
     /* height: fit-content; */
     max-height: 17px;
-    margin-left: 5px;
-    background-color: var(--bg-light);
-    padding: 5px;
+    /* margin-left: 5px; */
+    /* background-color: var(--bg-light); */
+    /* padding: 5px; */
     border-radius: 5px;
     vertical-align: sub;
+    margin: auto;
 }
 .add-btn .plus{
     max-width: 17px;
     max-height: 17px;
+}
+.add-btn .plus path{
+    stroke-width: 33px;
 }
 
 .inpt{
@@ -81,6 +90,9 @@ body{
 }
 .inpt:focus{
     box-shadow: var(--focus-shadow);
+}
+.inpt-lighter{
+    background-color: var(--bg-light);
 }
 
 .lighter{
@@ -145,3 +157,15 @@ body{
     font-size: 103%;
     margin: 2px;
 }
+
+
+
+.tooltip .tooltip-inner, .popover .popover {
+    box-shadow: 0px 2px 5px rgba(100, 80, 80, 0.5);
+    max-width: 250px;
+    color: var(--text-dark) !important;
+    background-color: var(--bg-light) !important;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+

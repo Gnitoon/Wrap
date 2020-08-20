@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import gen from '../views/generator.vue'
+import reqst from '../views/request.vue'
 
 
 Vue.use(VueRouter)
@@ -13,9 +13,9 @@ Vue.use(VueRouter)
     component: Home
   },
   {
-    path: '/gen',
-    name: 'generator',
-    component: gen
+    path: '/request',
+    name: 'Event Request',
+    component: reqst
   },
   // {
   //   path: '/about',

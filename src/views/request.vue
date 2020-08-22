@@ -1,24 +1,38 @@
 <template>
 	<div>
 
-		<div id="floatbox-container" v-show="floatbox.picker" >
-			<div id="sort-box" class="card-top float-card" v-show="floatbox.picker">
+		<div id="floatbox-container" v-show="floatbox.editing || floatbox.warning" >
+			<div id="sort-box" class="card-top float-card" v-show="floatbox.editing">
 				<div class="filter-header">
-					<b>Date picker</b>
-					<plus close="true" @click="floatbox.picker = !floatbox.picker"></plus>
+					<b>Restore previous session?</b>
+					<plus close="true" @click="floatbox.editing = !floatbox.editing"></plus>
 					<br>
 					<br>
 					<br>
 					<div class="picker-content">
-						<label for="timepick">Date </label>
-						<input
-							type="datetime-local"
-							class="inpt inpt-lighter"
-							v-model="datepicker.date"
-							id="timepick"
-							placeholder="2020/08/20 15:20"
-						>
-						<button class="btn btn-cta" @click="setDate('picker')">pick</button>
+						<p>
+							There are events saved on your browser from last session to prevent data loss. Recover?
+						</p>
+						<p><i>it will be at event list after description, click on the item to edit</i></p>
+						<button class="btn btn-cta" @click="ediit('recover')">Recover</button>
+						<button class="btn" @click="ediit('ignore')">Ignore</button>
+					</div>
+				</div>
+			</div>
+			<div id="sort-box" class="card-top float-card" v-show="floatbox.warning">
+				<div class="filter-header">
+					<b>{{warn.title}}</b>
+					<plus close="true" @click="floatbox.warning = !floatbox.warning"></plus>
+					<br>
+					<br>
+					<br>
+					<div class="picker-content">
+						<p>
+							{{warn.body}}
+						</p>
+						<p><i> {{warn.sub}} </i></p>
+						<button class="btn btn-cta" @click="warnAction(warn.btnProcedAction)">{{warn.btnProceed}}</button>
+						<button class="btn" @click="warnAction(warn.btnCalcelAction)">{{warn.btnCancel}}</button>
 					</div>
 				</div>
 			</div>
@@ -39,7 +53,7 @@
 			</div>
 	
 
-			<div class="gen-input-container">
+			<div class="gen-input-container" id="gic">
 
 				<!-- title -->
 				<div class="inpt-cont">
@@ -47,7 +61,7 @@
 					<input
 						type="text"
 						id="g-title"
-						class="inpt"
+						class="inpt clearable"
 						v-model="togen.title"
 						placeholder="event title *"
 					>
@@ -59,7 +73,7 @@
 					<input
 						type="text"
 						id="g-creator"
-						class="inpt"
+						class="inpt clearable"
 						v-model="togen.creator"
 						placeholder="Your name"
 					>
@@ -72,7 +86,7 @@
 						<input
 							:type="date.usePicker ? 'datetime-local' : 'text'"
 							id="g-datef"
-							class="inpt"
+							class="inpt clearable"
 							placeholder="Year/Month/Day Hour:Min (24h) (or timestamp)"
 							v-model="date.from"
 							v-tooltip="{...tooltip, content:'Date in YYYY/MM/DD HH:MM or current timestamp'}"
@@ -86,7 +100,7 @@
 						<input
 							:type="date.usePicker ? 'datetime-local' : 'text'"
 							id="g-datet"
-							class="inpt"
+							class="inpt clearable"
 							placeholder="Year/Month/Day Hour:Min (24h) (or timestamp)"
 							v-model="date.to"
 							v-tooltip="{...tooltip, content:'Date in YYYY/MM/DD HH:MM or current timestamp'}"
@@ -101,7 +115,7 @@
 						type="text"
 						id="g-month"
 						v-model="togen.month"
-						class="inpt"
+						class="inpt clearable"
 						placeholder="january, february..."
 						v-tooltip="{
 							...tooltip,
@@ -117,7 +131,7 @@
 						type="text"
 						id="g-local"
 						v-model="togen.local"
-						class="inpt"
+						class="inpt clearable"
 						placeholder="US, NY; Canada; World..."
 						v-tooltip="{
 							...tooltip,
@@ -134,7 +148,7 @@
 							type="text"
 							id="g-tags"
 							v-model="targets.tags"
-							class="inpt"
+							class="inpt clearable"
 							:placeholder="togen.title + ', event x'"
 							v-tooltip="{
 								...tooltip,
@@ -163,7 +177,7 @@
 							type="text"
 							id="g-links"
 							v-model="targets.links.title"
-							class="inpt"
+							class="inpt clearable"
 							placeholder="Title"
 							v-tooltip="{
 								...tooltip,
@@ -175,7 +189,7 @@
 							type="text"
 							id="g-links2"
 							v-model="targets.links.url"
-							class="inpt"
+							class="inpt clearable"
 							placeholder="URL: https://example.com"
 							v-tooltip="{
 								...tooltip,
@@ -199,7 +213,7 @@
 							type="text"
 							id="g-images"
 							v-model="targets.images.title"
-							class="inpt"
+							class="inpt clearable"
 							placeholder="Image title"
 							v-tooltip="{
 								...tooltip,
@@ -211,7 +225,7 @@
 							type="text"
 							id="g-images2"
 							v-model="targets.images.url"
-							class="inpt"
+							class="inpt clearable"
 							placeholder="URL: https://example.com/image.png"
 							v-tooltip="{
 								...tooltip,
@@ -235,7 +249,7 @@
 						<input 
 							type="text"
 							id="g-desc-short"
-							class="inpt"
+							class="inpt clearable"
 							placeholder="Short description *"
 							v-model="togen.description.short"
 							maxlength="100"
@@ -248,7 +262,7 @@
 						<textarea name="" id="" cols="30" rows="10"
 							type="text"
 							id="g-desc-long"
-							class="inpt"
+							class="inpt clearable"
 							placeholder="A longer description with some details about the event"
 							v-model="togen.description.long"
 						
@@ -256,22 +270,61 @@
 					</div>
 
 				</div>
+
+				<div class="inpt-cont">
+					<div class="linkList-cont">
+						<ul class="ll-sub-cont">
+							<li class="ll-item"
+								v-for="(evt, i) in generation"
+								:key="i"
+							>
+								{{evt.title || "hi"}}
+								<button class="btn dw-event" @click="ediit('edit', i)">edit</button>
+								<plus 
+									close="true"
+									@click="ritem('events', i)"
+									v-tooltip="{...tooltip, content: 'click to remove this event'}"
+								/>
+							</li>
+						</ul>
+					</div>
+					<div class="addEvt-btn-cont">
+						<button 
+							class="btn" 
+							@click="addEvent" 
+							v-tooltip="{...tooltip, content:'Add a new event'}"
+						><plus/> Add a event</button>
+
+					</div>
+				
+				</div>
+
 				<br>
 				<br>
+				<br>
+
 
 				<!-- generated -->
 				<div class="inpt-cont">
 
+					<button class="btn dw-event" >
+						<a :href="genDownloadableData()" :download="'wrap20-export_'+togen.title+'.json'" class="not-link">
+							<img src="../assets/icons/download.svg" alt="download icon" class="down-icon ac-search-icons">
+							Download JSON
+						</a>
+					</button>
+
 					<label for="generated">Generated JSON 
 						<a style="float: right;" class="link-blue" @click="json2clip">{{copied}}</a>
 					</label>
-					<textarea cols="30" rows="19"
+					<textarea cols="30" rows="21"
 						type="text"
 						id="generated"
 						class="inpt"
 						:value="generated"
 					
 					></textarea>
+
 				</div>
 
 				<div class="inpt-cont">
@@ -313,9 +366,20 @@
 					to:'',
 					usePicker:true
 				},
+				warn:{
+					title:'Warning',
+					body:'Current editing data will be overwrited',
+					sub:"Don't worry, it should be already saved :)" ,
+					btnCancel:'Cancel',
+					btnProceed:'Proceed',
+					btnCalcelAction:'cancel',
+					btnProcedAction:'overwrite'
+
+				},
 
 				floatbox:{
-					picker:false
+					editing:false,
+					warning: false
 				},
 				datepicker:{
 					date:'',
@@ -326,6 +390,10 @@
 					links:{ title:'', url:'' },
 					images:{ title:'', url:'' },
 				},
+
+				generation:[
+
+				],
 
 				tooltip:{
 					content:'Timestamp is the count as millisseconds in Unix Epoch sine jan 01 1970, ex: 1597453200000; provide better flexibility to present data later, more at https://www.unixtimestamp.com/',
@@ -338,6 +406,12 @@
 						hide:50
 					}
 				},
+
+				editing:[],
+				editingIndex: 0,
+				blank:'',
+				temp:'',
+				timeout: '',
 
 				togen:{
 					title:'',
@@ -361,12 +435,26 @@
 			}
 		},
 		created() {
-			this.togen.date.timestamp = Date.now()
+			this.togen.date.timestamp = Date.now();
+			this.blank = JSON.stringify(this.togen);
+			if(typeof localStorage.editing !== "undefined" && localStorage.editing != ""){
+				this.editing = JSON.parse(localStorage.editing)
+				this.floatbox.editing = true;
+			}
 		},
 		computed:{
 			generated(){
 				this.togen.id = `${this.togen.title}_${this.genId()}`
-				return JSON.stringify(this.togen, null, 4)
+				if(this.generation.length > 0){
+					if(this.timeout) clearTimeout(this.timeout)
+					this.timeout = setTimeout(()=>{
+						localStorage.editing = JSON.stringify(this.generation)
+					})
+					return JSON.stringify(this.generation, null, 4)
+				}
+				else{
+					return JSON.stringify([this.togen], null, 4)
+				}
 			},
 			usePickerText(){
 				return this.date.usePicker ? 'use timestamp' : 'use datepicker'
@@ -397,6 +485,36 @@
 		methods:{
 			back(){ history.back() },
 
+			warnAction(action){
+				if(action == "cancel"){
+					this.floatbox.warning = false;
+				}
+				else if(action == "overwrite"){
+					this.togen = this.temp
+					this.floatbox.warning = false;
+				}
+			},
+
+			// recover floatbox actions
+			ediit(action, selected = null){
+				if(action == "recover"){
+					this.generation = this.editing;
+					this.floatbox.editing = false;
+				}
+				else if(action == "ignore"){
+					localStorage.editing = "";
+					this.floatbox = false;
+				}
+				else if(action == "edit" && selected != null){
+					this.temp = this.generation[selected];
+					this.floatbox.warning = true
+					localStorage.editing = JSON.stringify(this.generation)
+				}
+			},
+
+ 			genDownloadableData:function(){
+				return `data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(JSON.parse(this.generated)))}`
+			},
 			/**
 			 * @description parse input date as timestamp for datepicker and text inputs
 			 * @param {String} target where put parsed to timestamp date
@@ -456,6 +574,12 @@
 				return rand;
 			},
 
+			addEvent(){
+				this.generation.push(this.togen)
+				this.togen = JSON.parse(this.blank)
+				localStorage.editing = JSON.stringify(this.generation)
+			},
+
 			/**
 			* @description add item to target array (tags, links or images)
 			* @param {String} target targeted property to push item
@@ -494,7 +618,14 @@
 			* 
 			*/
 			ritem(target, index){
-				this.togen[target].splice(index, 1)
+				if(target !== "events"){
+					this.togen[target].splice(index, 1)
+				}
+				else if(target === "events"){
+					// to make sure its right lol
+					if(!confirm("Remove this item?")) return
+					this.generation.splice(index, 1)
+				}
 			}
 		}
 	}
@@ -634,11 +765,41 @@
 
 	}
 
+
+	.addEvt-btn-cont{
+	}
+	.addEvt-btn-cont .btn{
+		float: right;
+
+	}
+	.addEvt-btn-cont .plusIcon-cont{
+		width: fit-content;
+		display: inline;
+		vertical-align: middle;
+		margin-right: 5px;
+	}
+	.addEvt-btn-cont .plus{
+		width: 15px;
+		height:15px;
+		z-index: 1;
+	}
+
 	
 	.picker-content .btn{
 		margin-top: 4px !important;
 	}
 
+	/* download btn/icon */
+	.dw-event{
+		padding: 8px 13px;
+		font-size: 85%;
+		background-color: var(--bg-light);
+		margin:auto;
+		font-size: 85%;
+	}
+	.dw-event .down-icon{
+		height: 14px;
+	}
 
 
 

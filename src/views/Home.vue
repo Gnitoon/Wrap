@@ -25,19 +25,6 @@
 
 		<headerbar/>
 
-		<!-- <header>
-			<div id="header">
-				<img src="../assets/wrap20.svg" alt="site lettermark" class="lettermrk">
-				
-				<div id="contrib">
-					<a href="https://github.com/matsukii/wrap20" class="link" target="blank">
-						<img src="../assets/icons/github.svg" class="git-icon" alt="Github icon">
-						Contribute
-					</a>
-				</div>
-			</div>
-		</header> -->
-
 
 		<div class="site-desc">
 			<h2>A simple list of things that happended this year</h2>
@@ -88,6 +75,11 @@
 					v-bind:key="item.id"
 					v-show="loaded" :item="item"
 				/>
+				<li class="evt-list-item">
+					<div style="display: flex;">
+						<p style="margin: auto;" class="evti-text">Missing an event? you can <router-link class="link link-blue" to="/request">generate a request</router-link> and/or collaborate on <a target="blank" class="link link-blue" href="https://github.com/matsukii/wrap20">Github repository</a></p>
+					</div>
+				</li>
 				
 			</ul>
 
@@ -199,7 +191,7 @@
 		},
 		methods:{
 			openDetails: function(id){
-				this.event = this.events.find(el => el.id == id)
+				this.event = this.events.find(el => el.id == id);
 				this.floatbox.details = true;
 			},
 			/**

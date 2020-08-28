@@ -3,317 +3,194 @@
     "lang": "en",
     "events": [
         {
-            "title": "testing",
-            "creator": "someone",
-            "id": "testing_0gr29i",
-            "month": "May",
-            "local": "US",
+            "title": "New Tsar Bomba footage",
+            "creator": "",
+            "id": "New Tsar Bomba footage_p6y9mk",
+            "month": "August",
+            "local": "Russia",
             "date": {
-                "from": 1590017280000,
-                "to": 1597879680000,
-                "timestamp": ""
+                "from": 1598472000000,
+                "to": 1598472000000,
+                "timestamp": 1598502141238
             },
             "description": {
-                "short": "testing generated data from .../request",
-                "long": "this is just to test the generator"
+                "short": "Russia revels footage from Tsar Bomba, the most powerful bomb",
+                "long": "Russia revels footage from Tsar Bomba ('Bomb of Czar'), the most powerful bomb.\nA 40min long video with new footage about the check-up, loading, drop and explosion."
             },
             "tags": [
-                "nothing",
-                "testing",
-                "aaaa"
+                "bomb",
+                "nuclear",
+                "Tsar bomba",
+                "hydrogen",
+                "Russia"
             ],
             "links": [
                 {
-                    "title": "Google",
-                    "url": "https://google.com"
+                    "title": "(G1) Rússia divulga vídeo da explosão da maior bomba de todos os tempos",
+                    "url": "https://g1.globo.com/mundo/noticia/2020/08/26/russia-divulga-video-da-explosao-da-maior-bomba-de-todos-os-tempos.ghtml"
                 },
                 {
-                    "title": "example",
-                    "url": "https://example.com"
+                    "title": "(NY Times) New Video Shows Largest Hydrogen Bomb Ever Exploded",
+                    "url": "https://www.nytimes.com/2020/08/25/science/tsar-bomba-nuclear-test.html"
                 }
             ],
             "images": [
                 {
-                    "title": "example",
-                    "url": "https://example.com"
+                    "title": "(video) Test of a pure hydrogen bomb with a capacity of 50 million tons",
+                    "url": "https://www.youtube.com/watch?v=nbC7BxXtOlo&t=3s"
+                },
+                {
+                    "title": "(image) Base  of the Mushroom cloud after explosion",
+                    "url": "https://static01.nyt.com/images/2020/08/25/science/25SCI-HBOMB2/25SCI-HBOMB2-jumbo.jpg?quality=90&auto=webp"
                 }
             ]
         },
         {
-            "id": "example",
-            "title": "Example from wrap20 git profile",
-            "month": "january",
+            "title": "Hurricane Laura",
+            "creator": "Anon",
+            "id": "Hurricane Laura_l26gyh",
+            "month": "August",
+            "local": "North of Atlantic Ocean",
             "date": {
-                "timestamp": 1596995834983,
-                "from": "2020/08/07 ~10:00",
-                "to": "2020/08/08 ~10:00"
+                "from": 1598292000000,
+                "to": "",
+                "timestamp": 1598581061576
             },
             "description": {
-                "short": "A quick descripion to show on each row",
-                "long": "A longer description with some info about the event"
+                "short": "Hurricane Laura approching United States from East side",
+                "long": "Strongest tropical storm that make landfall in Louisiana, moving through Arkansas "
             },
-            "local": [
-                "BR"
-            ],
             "tags": [
-                "example",
-                "test"
+                "Hurricane",
+                "Laura",
+                "Tropical storm"
             ],
-            "links":[
+            "links": [
                 {
-                    "url":"https://google.com",
-                    "title":"Google"
-                },
-                {
-                    "url":"https://google.com",
-                    "title":"Google"
-                },
-                {
-                    "url":"https://google.com",
-                    "title":"Google"
-                },
-                {
-                    "url":"https://google.com",
-                    "title":"Google"
-                },
-                {
-                    "url":"https://google.com",
-                    "title":"Google"
-                },
-                {
-                    "url":"https://google.com",
-                    "title":"Google"
-                },
-                {
-                    "url":"https://google.com",
-                    "title":"Google"
-                },
-                {
-                    "url":"https://google.com",
-                    "title":"Google"
-                },
-                {
-                    "url":"https://google.com",
-                    "title":"Google"
-                },
-                {
-                    "url":"https://google.com",
-                    "title":"Google"
-                },
-                {
-                    "url":"https://google.com",
-                    "title":"Google"
+                    "title": "(Wikipedia) Hurricane Laura",
+                    "url": "https://en.wikipedia.org/wiki/Hurricane_Laura"
                 }
-                
             ],
-            "images":[
+            "images": [
                 {
-                    "url":"https://google.com",
-                    "title":"Google"
-                },
-                {
-                    "url":"https://google.com",
-                    "title":"Google"
-                },
-                {
-                    "url":"https://google.com",
-                    "title":"Google"
-                },
-                {
-                    "url":"https://google.com",
-                    "title":"Google"
-                },
-                {
-                    "url":"https://google.com",
-                    "title":"Google"
-                },
-                {
-                    "url":"https://google.com",
-                    "title":"Google"
+                    "title": "(image) Map Path until 27/08 ",
+                    "url": "http://prntscr.com/u77jrn"
                 }
-                
             ]
         },
         {
-            "id": "example2",
-            "title": "Another example",
-            "month": "feb",
+            "title": "Snow in South of Brazil",
+            "creator": "",
+            "id": "Snow in South of Brazil_wi5ckk",
+            "month": "August",
+            "local": "South of Brazil, Santa Catarina, Rio Grande do Sul",
             "date": {
-                "timestamp": 1596995834983,
-                "from": "2020/08/07 ~10:00",
-                "to": "2020/08/08 ~10:00"
+                "from": 1598050800000,
+                "to": 1598236560000,
+                "timestamp": 1598581061576
             },
             "description": {
-                "short": "A quick descripion to show on each row",
-                "long": "A longer description with some info about the event"
+                "short": "Snow in South of Brazil",
+                "long": "In Brazil, Snowfall is pretty rare, due polar air mass and low temperatures a snowfall reached the southern region of the country"
             },
-            "local": [
-                "US, NY",
-                "All counries",
-                "unknown"
-            ],
             "tags": [
-                "example",
-                "test"
+                "snow"
             ],
-            "links":[
+            "links": [
                 {
-                    "url":"https://google.com",
-                    "title":"Google"
+                    "title": "(Tecmundo) Neve no Brasil: veja o fenômeno ao vivo pela internet",
+                    "url": "https://www.tecmundo.com.br/ciencia/176283-neve-brasil-veja-fenomeno-vivo-internet.htm"
+                },
+                {
+                    "title": "(G1) Cidades do RS registram neve e chuva congelada",
+                    "url": "https://g1.globo.com/rs/rio-grande-do-sul/noticia/2020/08/20/cidades-do-rs-registram-neve-e-chuva-congelada-veja-videos.ghtml"
+                },
+                {
+                    "title": "Twitter search",
+                    "url": "https://twitter.com/search?q=neve%20until%3A2020-08-23%20since%3A2020-08-20&src=typed_query"
                 }
-                
             ],
-            "images":[
+            "images": []
+        },
+        {
+            "title": "Asteroid passes close to Earth (2020QG)",
+            "creator": "",
+            "id": "Asteroid passes close to Earth (2020QG)_lp1gjk",
+            "month": "August",
+            "local": "southern Indian Ocean",
+            "date": {
+                "from": 1597586880000,
+                "to": 1597714200000,
+                "timestamp": 1598059580724
+            },
+            "description": {
+                "short": "A tiny asteroid passed unnoticed trough Earth",
+                "long": "A tiny asteroid passed unnoticed trough Earth, named 2020QG, with 3~6 meters.\nIt was the closest known asteroid without impact"
+            },
+            "tags": [
+                "asteroid",
+                "2020QG",
+                "tiny"
+            ],
+            "links": [
                 {
-                    "url":"https://google.com",
-                    "title":"Google"
+                    "title": "(NASA/jpl) Tiny Asteroid Buzzes by Earth",
+                    "url": "https://www.jpl.nasa.gov/news/news.php?feature=7728&utm_source=TWITTER&utm_medium=AsteroidWatch&utm_campaign=NASASocial&linkId=97573731"
                 }
-                
+            ],
+            "images": [
+                {
+                    "title": "Asteroid trajectory",
+                    "url": "https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA24037_hires.jpg"
+                }
             ]
         },
         {
-            "id": "example3",
-            "title": "Example",
-            "month": "january",
+            "title": "Tension between countries",
+            "creator": "dev",
+            "id": "Tension between countries_s3fw1k",
+            "month": "January",
+            "local": "US, Iran",
             "date": {
-                "timestamp": 1596995834983,
-                "from": "2020/08/07 ~10:00",
-                "to": "2020/08/08 ~10:00"
+                "from": 1578026580000,
+                "to": 1578631380000,
+                "timestamp": 1597984978174
             },
             "description": {
-                "short": "A quick descripion to show on each row",
-                "long": "A longer description with some info about the event"
+                "short": "Tensions between United States and Iran",
+                "long": "After Pentagon (US) annouce the killing of Maj. Gen. Qasem Soleimani by an air strike in Iran, tensions between both countries raised leading protests and rocket strikes to fortfied bases in Iran"
             },
-            "local": [
-                "BR"
-            ],
             "tags": [
-                "example",
-                "test"
+                "war",
+                "ww3",
+                "tension",
+                "US",
+                "Iran"
             ],
-            "links":[
+            "links": [
                 {
-                    "url":"https://google.com",
-                    "title":"Google"
-                }
-                
-            ],
-            "images":[
+                    "title": "(ABC) Tensions between Iran and US can spark a war?",
+                    "url": "https://www.abc.net.au/news/2020-01-07/world-war-3-qassem-soleimani-trump-us-and-iran/11841254"
+                },
                 {
-                    "url":"https://google.com",
-                    "title":"Google"
-                }
-                
-            ]
-        },
-        {
-            "id": "example4",
-            "title": "Another example",
-            "month": "feb",
-            "date": {
-                "timestamp": 1596995834983,
-                "from": "2020/08/07 ~10:00",
-                "to": "2020/08/08 ~10:00"
-            },
-            "description": {
-                "short": "A quick descripion to show on each row",
-                "long": "A longer description with some info about the event"
-            },
-            "local": [
-                "US, NY",
-                "All counries",
-                "unknown"
-            ],
-            "tags": [
-                "example",
-                "test"
-            ],
-            "links":[
+                    "title": "(G1) Repercurssão do ataque",
+                    "url": "https://g1.globo.com/mundo/noticia/2020/01/03/ataque-dos-eua-mata-general-do-ira-veja-repercussao.ghtml"
+                },
                 {
-                    "url":"https://google.com",
-                    "title":"Google"
-                }
-                
-            ],
-            "images":[
+                    "title": "(mcclatchydc) Is the US headed for World War III?",
+                    "url": "https://www.mcclatchydc.com/news/nation-world/world/article238940155.html"
+                },
                 {
-                    "url":"https://google.com",
-                    "title":"Google"
-                }
-                
-            ]
-        },
-        {
-            "id": "example5",
-            "title": "Example",
-            "month": "january",
-            "date": {
-                "timestamp": 1596995834983,
-                "from": "2020/08/07 ~10:00",
-                "to": "2020/08/08 ~10:00"
-            },
-            "description": {
-                "short": "A quick descripion to show on each row",
-                "long": "A longer description with some info about the event"
-            },
-            "local": [
-                "BR"
-            ],
-            "tags": [
-                "example",
-                "test"
-            ],
-            "links":[
+                    "title": "(CNN) 'World War III' was trending?",
+                    "url": "https://edition.cnn.com/2020/01/05/opinions/world-war-iii-was-trending-opinion-weekly-column-galant/index.html"
+                },
                 {
-                    "url":"https://google.com",
-                    "title":"Google"
+                    "title": "Twitter tag search",
+                    "url": "https://twitter.com/search?q=WorldWarThree%20until%3A2020-02-01%20since%3A2020-01-01&src=typed_query"
                 }
-                
             ],
-            "images":[
-                {
-                    "url":"https://google.com",
-                    "title":"Google"
-                }
-                
-            ]
-        },
-        {
-            "id": "example6",
-            "title": "Another example",
-            "month": "feb",
-            "date": {
-                "timestamp": 1596995834983,
-                "from": "2020/08/07 ~10:00",
-                "to": "2020/08/08 ~10:00"
-            },
-            "description": {
-                "short": "A quick descripion to show on each row",
-                "long": "A longer description with some info about the event"
-            },
-            "local": [
-                "US, NY",
-                "All counries",
-                "unknown"
-            ],
-            "tags": [
-                "example",
-                "test"
-            ],
-            "links":[
-                {
-                    "url":"https://google.com",
-                    "title":"Google"
-                }
-                
-            ],
-            "images":[
-                {
-                    "url":"https://google.com",
-                    "title":"Google"
-                }
-                
-            ]
+            "images": []
         }
+        
     ]
 }

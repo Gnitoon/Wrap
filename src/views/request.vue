@@ -207,7 +207,7 @@
 
 				<!-- images -->
 				<div class="inpt-cont">
-					<label for="g-images">Images</label>
+					<label for="g-images">Images/Videos</label>
 					<div class="glin-sub-cont">
 						<input 
 							type="text"

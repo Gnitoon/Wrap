@@ -48,7 +48,7 @@
         </div>
 
         <div class="dit-cont">
-            <p class="dit-title">Images</p>
+            <p class="dit-title">Images/Videos</p>
             <ul>
                 <li v-for="im in event.images"><a class="link link-blue" :href="im.url" target="blank">{{im.title}}</a></li>
             </ul>

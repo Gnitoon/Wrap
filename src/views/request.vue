@@ -379,7 +379,7 @@
 
 				floatbox:{
 					editing:false,
-					warning: false
+					warning:false,
 				},
 				datepicker:{
 					date:'',
@@ -503,11 +503,12 @@
 				}
 				else if(action == "ignore"){
 					localStorage.editing = "";
-					this.floatbox = false;
+					this.floatbox.warning = false;
+					this.floatbox.editing = false;
 				}
 				else if(action == "edit" && selected != null){
 					this.temp = this.generation[selected];
-					this.floatbox.warning = true
+					this.floatbox.warning = true;
 					localStorage.editing = JSON.stringify(this.generation)
 				}
 			},

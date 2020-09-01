@@ -3,6 +3,115 @@
     "lang": "en",
     "events": [
         {
+            "title": "New NVIDIA GPUs",
+            "creator": "",
+            "id": "New NVIDIA GPUs_cjf4wi",
+            "month": "September",
+            "local": "",
+            "date": {
+                "from": 1598972400000,
+                "to": 1598978100000,
+                "timestamp": 1598981264612
+            },
+            "description": {
+                "short": "NVIDIA annouces new RTX 30 Series Graphics Cards",
+                "long": "NVIDIA annouces new RTX 30 Series Graphics Cards\n* RTX 3070 (US$499),\n   20 shaders T-Flops, 40 RT T-flops, 163 Tensor T-Flops\n   8GB G6 vram\n   \n* RTX 3080 (US$699),\n   30 shaders T-Flops, 50 RT T-flops, 238 Tensor T-Flops\n   10GB G6X vram\n   \n* RTX 3090 (US$1.499)\n   34 shaders T-Flops, 69 RT T-flops, 285 Tensor T-Flops\n   24GB G6X vram\n   Up to 8K at 60fps gaming!\n\nAll of them using Ampere architecture  "
+            },
+            "tags": [
+                "NVIDIA",
+                "RTX",
+                "3080 RT",
+                "3070 RT",
+                "3090 RT",
+                "livestream",
+                "GPU",
+                "pc hardware"
+            ],
+            "links": [],
+            "images": [
+                {
+                    "title": "(Video, NVIDIA) RTX 30 Series lauch event ",
+                    "url": "https://www.youtube.com/watch?v=E98hC9e__Xs"
+                },
+                {
+                    "title": "(Video, NVIDIA) RTX 30 Series trailer",
+                    "url": "https://www.youtube.com/watch?v=7QeoZY4tf9I"
+                },
+                {
+                    "title": "(Image) RTX 3070",
+                    "url": "https://pbs.twimg.com/media/Eg2FVhRXsAoKsuW?format=jpg&name=4096x4096"
+                },
+                {
+                    "title": "(Image) RTX 3080",
+                    "url": "https://pbs.twimg.com/media/Eg2FbaNXkAYft0m?format=jpg&name=4096x4096"
+                },
+                {
+                    "title": "(Image) RTX 3090",
+                    "url": "https://pbs.twimg.com/media/Eg2FdI0XYAIVfFo?format=jpg&name=4096x4096"
+                }
+            ]
+        },
+        {
+            "title": "Chadwick Boseman died",
+            "creator": "",
+            "id": "Chadwick Boseman died_mibmyf",
+            "month": "August",
+            "local": "",
+            "date": {
+                "from": 1598667060000,
+                "to": 1598667060000,
+                "timestamp": 1598675360352
+            },
+            "description": {
+                "short": "Actor Chadwick Boseman (Black Phanter) passes out",
+                "long": "Actor Chadwick Boseman (Black Phanter) passes out on his 43 years old from stage IV Colon Cancer. He was diagnosed with stage III in 2016.\n#WakandaForever"
+            },
+            "tags": [
+                "Chadwick Boseman",
+                "Wakanda Forever",
+                "Black Phanter"
+            ],
+            "links": [
+                {
+                    "title": "Official Tweet Announce",
+                    "url": "https://twitter.com/chadwickboseman/status/1299530165463199747"
+                }
+            ],
+            "images": [
+                {
+                    "title": "(image) Official twitter ",
+                    "url": "https://twitter.com/chadwickboseman/status/1299530165463199747/photo/2"
+                }
+            ]
+        },
+        {
+            "title": "Neuralink Progress update",
+            "creator": "",
+            "id": "Neuralink Progress update_rzvn4f",
+            "month": "August",
+            "local": "",
+            "date": {
+                "from": 1598654400000,
+                "to": "",
+                "timestamp": 1598675360352
+            },
+            "description": {
+                "short": "A Progress update, demo and job opportunity",
+                "long": "A live video hosted by Elon Musk about Neuralink progress, showing new version of the 'link' (implant), features, demo with the link on (cute) Pigs and a Q&A with the development group"
+            },
+            "tags": [
+                "neuralink",
+                "Elon Musk"
+            ],
+            "links": [],
+            "images": [
+                {
+                    "title": "(video) Live video on demand from Neuralink Youtube Channel",
+                    "url": "https://www.youtube.com/watch?v=DVvmgjBL74w"
+                }
+            ]
+        },
+        {
             "title": "New Tsar Bomba footage",
             "creator": "",
             "id": "New Tsar Bomba footage_p6y9mk",
